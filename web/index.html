@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MaddazCloud — Modern iOS-style Cloud Storage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">MaddazCloud</div>
+      <div class="actions">
+        <button id="themeBtn" class="icon">🌓</button>
+        <button id="loginBtn" class="btn primary">Login</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="sidebar">
+        <div class="profile">
+          <div class="avatar">MC</div>
+          <div class="meta">
+            <div class="name">Guest</div>
+            <div class="email">-</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav-item active" data-view="files">Files</button>
+          <button class="nav-item" data-view="settings">Settings</button>
+        </nav>
+      </section>
+
+      <section class="content">
+        <div class="toolbar">
+          <div class="left">
+            <input id="fileInput" type="file" multiple />
+            <button id="uploadBtn" class="btn">Upload</button>
+            <div id="previewArea" class="preview-area"></div>
+          </div>
+          <div class="right">
+            <input id="search" placeholder="Search files..." />
+          </div>
+        </div>
+
+        <div id="filesView" class="view">
+          <div id="empty" class="empty">No files yet. Upload to get started.</div>
+          <ul id="fileList" class="file-list"></ul>
+        </div>
+
+        <div id="settingsView" class="view hidden">
+          <h3>Account & Theme</h3>
+          <div class="card">
+            <label>Theme</label>
+            <select id="themeSelect"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Made with ♥ by MaddazXD - Gondrong STIES</footer>
+  </div>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Account</h3>
+      <input id="name" placeholder="Full name (for register)" />
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <div class="row">
+        <button id="emailLogin" class="btn primary">Login</button>
+        <button id="registerBtn" class="btn">Register</button>
+      </div>
+      <button id="closeLogin" class="btn ghost">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
